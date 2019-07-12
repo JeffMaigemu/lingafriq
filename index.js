@@ -1,28 +1,75 @@
+
+var submitBtn = document.getElementById("submitBtn");
+
 $(document).ready(function(){
-    list = ["Kswahili","Hausa","Igbo","Yoruba","khosa","Berom","Tiv","Ngas","Igala","Ibibio","Taroh","African Languages"];
+
+    list = ["Kswahili","Hausa","Igbo","Yoruba","khosa","Berom","Tiv","Ngas","Igala","Ibibio","Taroh",
+    "Kswahili", "Kikuyu",  "Kamba",
+    "Wolof", "Balanta-Ganja",
+    "Akuapem Twi", "Asante Twi", "Fante",
+    "Oromo", "Amharic", "Tigrinya",
+    "Zulu", "Xhosa", "Afrikaans",  
+    "African Languages"];
     index = 0;
-    intr = setInterval(yourfun, 100);
+    intr = setInterval(fancyIterateAndGlow, 100);
    
-    function yourfun()
+    function fancyIterateAndGlow()
     { 
        $("#languagesList").html(list[index++]);
-       if(index == 12) clearInterval(intr);
+       if(index == 26) clearInterval(intr);
     }
 
     glowPulse("#languagesList", 0, 5, 100, 255, 255, 255);
    });
 
-var email = document.getElementById("email");
-var submitBtn = document.getElementById("submitBtn");
+
+
+var db = firebase.firestore();
 
 function submitClick (){
 
+    
+  
+console.log("hi there, I was clicked");
+
+var email = document.getElementById("email").value;
+
+
+    var documente = {
+        user: email,
+        message: 'Hello friends!',
+        posted: firebase.firestore.FieldValue.serverTimestamp()
+    };
+
+    var doc = db.collection('chat').doc('documente');
+
+    db.collection('chat').add(documente).then(function(doc) {
+        console.log('New chat message was given id: ', doc.id);
+    }).catch(function(error) {
+        console.error('Error adding chat message: ', error);
+    });
+
+}
+
+/*function submitClick (){
+
     console.log("hi there, I was clicked");
 
-    let firebaseRef = this.database().ref();
+    var document = {
+        user: 'jason',
+        message: 'Hello friends!',
+        posted: firebase.firestore.FieldValue.serverTimestamp()
+    };
 
-    firebaseRef.child("email").set("Some Value");
-}
+    db.collection('chat').add(document).then(function(docRef) {
+        console.log('New chat message was given id: ', docRef.id);
+    }).catch(function(error) {
+        console.error('Error adding chat message: ', error);
+    });
+
+
+   
+} */
 
 function glowPulse(selector, min_radius, max_radius, speed, r, g, b, inc, radius){
     

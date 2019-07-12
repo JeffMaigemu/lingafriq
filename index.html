@@ -89,16 +89,16 @@
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <h1 class="mb-5">Hey there! Want to explore the beauty of <span id="languagesList"> African Languages </span> ? <span id="welcomeList"> Welcome home. </span> </h1>
-          <h4 class="mb-5">take full control of your learning, which combines the history, culture, and live interactions with native speakers of the African Continent </h4>
+          <h4 class="mb-5">Take full control of your learning, which combines the history, culture, and live interactions with native speakers of the African continent. </h4>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form>
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                <input id="email" type="text" class="form-control form-control-lg" placeholder="Enter your email...">
               </div>
               <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign me Up!</button>
+                <button id="submitBtn" onclick="submitClick()" class="btn btn-block btn-lg btn-primary">Get Started</button>
               </div>
             </div>
           </form>
@@ -116,21 +116,22 @@
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/countries/nigeria.png" alt="">
             <h5>Nigerian Languages</h5>
-            <p class="font-weight-light mb-0">Choose from Pidgin English, Yoruba, Hausa, Ibo</p>
+            <p class="font-weight-light mb-0">With Naija languages, no wahala! Choose from a variety of Pidgin English, Yoruba, Hausa, Ibo, and more. Let us tell you more <a href="/index.html"> here</a></p>
+            <p></p> 
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/countries/kenya.png" alt="">
             <h5>Kenyan Languages</h5>
-            <p class="font-weight-light mb-0">Kswahili, Kikuyu, Kamba, and more..</p>
+            <p class="font-weight-light mb-0"> We offer Kswahili, Kikuyu, and Kamba. Learn more <a href="/index.html">  here</a></p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/countries/senegal.png" alt="">
             <h5>Senegalese Languages</h5>
-            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+            <p class="font-weight-light mb-0"> Discover the beauty of Senegal. Explore Wolof, Balanta-Ganja, and more languages. Learn more <a href="/index.html">  here</a></p>
           </div>
         </div>
        
@@ -138,21 +139,21 @@
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/countries/ghana.png" alt="">
             <h5>Ghanian Languages</h5>
-            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+            <p class="font-weight-light mb-0"> The former Gold Coast has languages you would love to learn like Akuapem Twi, Asante Twi, Fante, and more.. Learn more <a href="/index.html">  here</a></p>
           </div>
         </div>
         <div class="col-lg-4">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="img/countries/ethiopia.png" alt="">
               <h5>Ethiopian Languages</h5>
-              <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+              <p class="font-weight-light mb-0">Oromo, Amharic, Tigrinya and others are what you stand to get from our Ethiopian collection. Discover  <a href="/index.html">  here</a> </p>
             </div>
           </div>
           <div class="col-lg-4">
               <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                 <img class="img-fluid rounded-circle mb-3" src="img/countries/drc.png" alt="">
-                <h5>DRC Languages</h5>
-                <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                <h5>South African Languages</h5>
+                <p class="font-weight-light mb-0">Zulu, Xhosa, Afrikaans, and more.. Learn more <a href="/index.html">  here</a></p>
               </div>
             </div>
       </div>
@@ -170,8 +171,8 @@
             </div>
             <h3>African languages, really??</h3>
             <p class="lead mb-0">
-            Yes, really. Over 7,000 languages in the world. About
-             2000 of them are in Africa. Learn about Africa, here, now, through any language of your choice.</p>
+            Yes, really! Over 7,000 languages in the world. Nearly
+             2,000 of them are in Africa. Discover Africa, here, now, through any language of your choice.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -191,7 +192,7 @@
               <i class="icon-check m-auto text-primary"></i>
             </div>
             <h3>Learn using what you love</h3>
-            <p class="lead mb-0">Whether movie/music lover, or history junkie, our lessons are customised to 
+            <p class="lead mb-0">Whether movie/music lover or history junkie, our lessons are customised to 
               teach you any language using the elements of your hobbies. Music lovers, think of learning
             using songs from your favourite African artists. How cool is that? </p>
           </div>
@@ -216,10 +217,10 @@
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h2>Rely on a REAL African Language course</h2>
-          <p class="lead mb-0">With LingAfriq, your learn languages
+          <h2>Rely on an AUTHENTIC African Language course</h2>
+          <p class="lead mb-0">With LingAfriq, you learn languages
              the way they are spoken, not the way the books say.
-              We teach you how to become a real, native speaker. We make learning as real, 
+              We teach you how to become a real, native speaker. We make learning as real 
               and natural as it could be!</p>
         </div>
       </div>
@@ -315,17 +316,29 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.2.4/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+     <script src="/__/firebase/6.2.4/firebase-firestore.js"></script>
+
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
 
 <script>
+</script>
+
+
+    
+ 
+<!-- <script>
   // Your web app's Firebase configuration
+
   var firebaseConfig = {
     apiKey: "AIzaSyCoodnnhWKmXfUbhD2BqVfdMWFeepHAPbQ",
     authDomain: "lingafriq-15d2a.firebaseapp.com",
@@ -338,10 +351,7 @@
 
     firebase.initializeApp(firebaseConfig);
 
-    var database = firebase.database();
-  
- 
-</script>
+</script> -->
 
 <script src="index.js"> </script>
 
