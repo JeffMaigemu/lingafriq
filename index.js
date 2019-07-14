@@ -34,20 +34,41 @@ console.log("hi there, I was clicked");
 
 var email = document.getElementById("email").value;
 
+function emailIsValid (email) {
 
-    var documente = {
-        user: email,
-        message: 'Hello friends!',
-        posted: firebase.firestore.FieldValue.serverTimestamp()
-    };
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
-    var doc = db.collection('chat').doc('documente');
+    
+  }
+  
 
-    db.collection('chat').add(documente).then(function(doc) {
-        console.log('New chat message was given id: ', doc.id);
-    }).catch(function(error) {
-        console.error('Error adding chat message: ', error);
-    });
+if(emailIsValid == false){
+
+    alert("Email not valid, sorry. PLease check again");
+
+    submitBtn = "false";
+
+}else{
+
+        var documente = {
+                user: email,
+                message: 'Hello friends!',
+                posted: firebase.firestore.FieldValue.serverTimestamp()
+            };
+
+            var doc = db.collection('chat').doc('documente');
+
+            db.collection('chat').add(documente).then(function(doc) {
+                console.log('New chat message was given id: ', doc.id);
+            }).catch(function(error) {
+                console.error('Error adding chat message: ', error);
+            });
+
+
+    }
+
+
+    
 
 }
 

@@ -3,3 +3,7 @@ config.js
 firebase-debug.log
 
 .firebase/hosting.cHVibGlj.cache
+public
+package-lock.json
+package.json
+.firebaserc
