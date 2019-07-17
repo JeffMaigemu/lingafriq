@@ -1,6 +1,3 @@
-
-var submitBtn = document.getElementById("submitBtn");
-
 $(document).ready(function(){
 
     list = ["Kswahili","Hausa","Igbo","Yoruba","khosa","Berom","Tiv","Ngas","Igala","Ibibio","Taroh",
@@ -22,75 +19,27 @@ $(document).ready(function(){
     glowPulse("#languagesList", 0, 5, 100, 255, 255, 255);
    });
 
-
-
 var db = firebase.firestore();
 
 function submitClick (){
 
-    
-  
-console.log("hi there, I was clicked");
+    console.log("hi there, I was clicked");
+    var email = document.getElementById("email").value;
 
-var email = document.getElementById("email").value;
-
-function emailIsValid (email) {
-
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-
-    
-  }
-  
-
-if(emailIsValid == false){
-
-    alert("Email not valid, sorry. PLease check again");
-
-    submitBtn = "false";
-
-}else{
-
+      
         var documente = {
                 user: email,
-                message: 'Hello friends!',
                 posted: firebase.firestore.FieldValue.serverTimestamp()
             };
 
-            var doc = db.collection('chat').doc('documente');
+        var doc = db.collection('chat').doc('documente');
 
-            db.collection('chat').add(documente).then(function(doc) {
-                console.log('New chat message was given id: ', doc.id);
-            }).catch(function(error) {
-                console.error('Error adding chat message: ', error);
-            });
-
-
+        db.collection('chat').add(documente).then(function(doc) {
+            console.log('New chat message was given id: ', doc.id);
+        }).catch(function(error) {
+            console.error('Error adding chat message: ', error);
+        });
     }
-
-
-    
-
-}
-
-/*function submitClick (){
-
-    console.log("hi there, I was clicked");
-
-    var document = {
-        user: 'jason',
-        message: 'Hello friends!',
-        posted: firebase.firestore.FieldValue.serverTimestamp()
-    };
-
-    db.collection('chat').add(document).then(function(docRef) {
-        console.log('New chat message was given id: ', docRef.id);
-    }).catch(function(error) {
-        console.error('Error adding chat message: ', error);
-    });
-
-
-   
-} */
 
 function glowPulse(selector, min_radius, max_radius, speed, r, g, b, inc, radius){
     
